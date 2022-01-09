@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>propriedade <code>position</code>:</p>
+
+      <div class="botoes">
+        <button class="botao ativo" id="btn1" data-id="static">static</button>
+        <button class="botao" id="btn2" data-id="relative">relative</button>
+        <!-- <button class="botao" id="btn3" data-id="fixed">fixed</button>
+        <button class="botao" id="btn4" data-id="absolute">absolute</button> -->
+        <!-- <button class="botao" id="btn5" data-id="stick">sticky</button> -->
+
+        <fieldset>
+
+          <legend>propriedade de posição</legend>
+
+        <select name="" id="selec">
+          <option value="">selecione</option>
+          <option value="">bloco1</option>
+          <option value="">bloco2</option>
+          <option value="">bloco3</option>
+        </select>
+
+        <select name="" id="pos">
+          <option value="">position ?</option>
+          <option value="">fixed</option>
+          <option value="">absolute</option>
+          <option value="">sticky</option>
+        </select>
+
+        <span>Left: <input type="number" value="0">px</span>
+        <span>Top: <input type="number" value="0">px</span>
+        <span>Rigth: <input type="number" value="0">px</span>
+        <span>Botton: <input type="number" value="0">px</span>
+
+        </fieldset>
+      </div>
+
+      <div class="painel">
+        <div class="cor1" id="bloco1">bloco1</div>
+        <div class="cor2" id="bloco2">bloco2</div>
+        <div class="cor3" id="bloco3">bloco3</div>
+      </div>
+    </div>
+
+    <script>
+      let botoes = document.querySelectorAll(".botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+          console.log(valor);
+
+          let blocos = document.querySelectorAll(".painel > div");
+          blocos.forEach((bloco) => (bloco.style.position = valor));
+
+          botoes.forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      let selec = document.querySelector("#selec");
+      let pos = document.querySelector("#pos");
+      let campos = document.querySelectorAll("fieldset  input");
+      let block
+
+      selec.onchange = (evt) => {
+        let a = evt.target
+        if (a.selectedIndex > 0){
+          block = document.querySelector( `#${a.options[a.selectedIndex].text}` )
+
+          campos.item(0).value = block.style.left.replace("px","")
+          campos.item(1).value = block.style.top.replace("px","")
+          campos.item(2).value = block.style.right.replace("px","")
+          campos.item(3).value = block.style.bottom.replace("px","")
+        }
+      }
+
+      pos.onchange = (evt) => {
+        let a = evt.target
+        if (block != undefined){
+          block.style.position = a.options[a.selectedIndex].text
+        }
+      }
+
+      campos.forEach((cp) => {
+
+        cp.onchange = (evt)=>{
+          block.style.left = `${campos.item(0).value}px`
+          block.style.top = `${campos.item(1).value}px`
+          block.style.right = `${campos.item(2).value}px`
+          block.style.bottom = `${campos.item(3).value}px`
+        }
+
+      })
+
+
+    </script>
+  </body>
+</html>
