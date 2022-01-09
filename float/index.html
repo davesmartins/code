@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>propriedade <code>float</code>:</p>
+
+      <div class="botoes">
+        <fieldset>
+
+          <legend>propriedade de posição</legend>
+
+        <select name="" id="selec">
+          <option value="">selecione</option>
+          <option value="">bloco1</option>
+          <option value="">bloco2</option>
+          <option value="">paragrafo</option>
+          <option value="">bloco3</option>
+          <option value="">bloco4</option>
+        </select>
+
+        <select name="" id="pos">
+          <option value="">float</option>
+          <option value="">left</option>
+          <option value="">right</option>
+          <option value="">clear both</option>
+        </select>
+
+        </fieldset>
+      </div>
+
+      <div class="painel">
+        <div class="cor1" id="bloco1">bloco1</div>        
+        <div class="cor2" id="bloco2">bloco2</div>
+        <div class="cor3" id="bloco3">bloco3</div>
+        <p id="paragrafo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minima voluptates reprehenderit accusamus nostrum mollitia facilis eos. Suscipit aliquam tempora cum, laudantium velit, doloremque id ipsam, tempore dolorum est deleniti.
+        </p>
+        <div class="cor1" id="bloco4">bloco4</div>
+      </div>
+    </div>
+
+    <script>
+
+      let selec = document.querySelector("#selec");
+      let pos = document.querySelector("#pos");
+
+      let block
+
+      selec.onchange = (evt) => {
+        let a = evt.target
+        if (a.selectedIndex > 0){
+          block = document.querySelector( `#${a.options[a.selectedIndex].text}` )
+        }
+      }
+
+      pos.onchange = (evt) => {
+        let a = evt.target
+        if (block != undefined){
+          if (a.options[a.selectedIndex].text === 'clear both'){
+            block.style.float = 'none'
+            block.style.clear = 'both'
+          }else{
+            block.style.float = a.options[a.selectedIndex].text
+          }
+          
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
