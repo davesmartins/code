@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>propriedade <code>display</code>:</p>
+
+      <div class="botoes">
+        <button class="botao" id="btn1" data-id="inline">inline</button>
+        <button class="botao ativo" id="btn2" data-id="block">block</button>
+        <button class="botao" id="btn3" data-id="inline-block">
+          inline-block
+        </button>
+        <button class="botao" id="btn4" data-id="none">none</button>
+      </div>
+
+      <div class="painel">
+        <div class="cor1">bloco1</div>
+        <div class="cor2">bloco2</div>
+        <div class="cor3">bloco3</div>
+      </div>
+    </div>
+
+    <script>
+      let botoes = document.querySelectorAll(".botao");
+
+      botoes.forEach((btn) => {
+                
+        btn.onclick  = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+          console.log(valor);
+
+          let blocos = document.querySelectorAll(".painel > div");
+          blocos.forEach((bloco) => (bloco.style.display = valor));
+
+          botoes.forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        }
+
+      })
+
+    </script>
+  </body>
+</html>
