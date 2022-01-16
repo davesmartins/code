@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3><code>FlexBox</code>:</h3>
+
+      <!-- DISPLAY -->
+      <details>
+        <summary>display</summary>
+        <section id="display">
+          <p>
+            Define o elemento como um flex container, tornando os seus filhos
+            flex-itens.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade display</legend>
+
+              <button class="botao ativo" data-id="block">block</button>
+              <button class="botao" data-id="flex">flex</button>
+              <button class="botao" data-id="inline-flex">inline-flex</button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">
+                <mark>display: <span class="prop">block</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- DIRECTION -->
+      <details>
+        <summary>flex-direction</summary>
+        <section id="flex-direction">
+          <p>
+            Define a direção dos flex itens, a direção escolhida é chamada de
+            main-axis, "Eixo principal". Especifica como os itens são colocados
+            no container, definindo a direção do eixo principal do container
+            flex
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade flex-direction</legend>
+
+              <button class="botao ativo" data-id="row">row</button>
+              <button class="botao" data-id="column">column</button>
+              <button class="botao" data-id="row-reverse">row-reverse</button>
+              <button class="botao" data-id="column-reverse">
+                column-reverse
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span class="prop">row</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- WRAP -->
+      <details>
+        <summary>flex-wrap</summary>
+        <section id="flex-wrap">
+          <p>
+            Define se os itens devem quebrar ou não a linha. Controla se o
+            container flex é single-line ou multi-line na direção do cross-axis,
+            "eixo transversal"
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade flex-wrap</legend>
+
+              <button class="botao ativo" data-id="nowrap">nowrap</button>
+              <button class="botao" data-id="wrap">wrap</button>
+              <button class="botao" data-id="wrap-reverse">wrap-reverse</button>
+            </fieldset>
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <button class="opBloco" data-id="+" data-ref="flex-wrap">
+                + Blocos
+              </button>
+              <button class="opBloco" data-id="-" data-ref="flex-wrap">
+                - Blocos
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-wrap: <span class="prop">nowrap</span>; </mark>
+              </div>
+              }<br />
+
+              .container-flex div{
+              <div class="demo__code-prop">width: 45%;</div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+              <div class="cor1">bloco4</div>
+              <div class="cor2">bloco5</div>
+              <div class="cor3">bloco6</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- ORDER -->
+      <details>
+        <summary>order</summary>
+        <section id="order">
+          <p>
+            controla a ordem em que os itens aparecem no container flexível,
+            valor padrão é 0. Modifica a ordem dos flex itens. Sempre do menor
+            para o maior, assim order: 1, aparece na frente de order: 5.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade order</legend>
+
+              <button class="botao" data-id="-1">-1</button>
+              <button class="botao" data-id="0">0</button>
+              <button class="botao" data-id="1">+1</button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              }<br />
+
+              .container-flex div:nth-child(3){
+              <div class="demo__code-prop">
+                <mark>order: <span class="prop">0</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor1">bloco2</div>
+              <div class="cor2">bloco3</div>
+              <div class="cor1">bloco4</div>
+              <div class="cor1">bloco5</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- JUSTIFY CONTENT AXIS-MAIN -->
+      <details>
+        <summary>justify-content</summary>
+        <section id="justify-content">
+          <p>
+            Alinha os itens flex no container de acordo com a direção do eixo
+            principal. A propriedade só funciona se os itens atuais não ocuparem
+            todo o container. Isso significa que ao definir flex: 1; ou algo
+            similar nos itens, a propriedade não terá mais função
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade justify-content</legend>
+
+              <button class="botao ativo" data-id="flex-start">
+                flex-start
+              </button>
+              <button class="botao" data-id="flex-end">flex-end</button>
+              <button class="botao" data-id="center">center</button>
+              <button class="botao" data-id="space-between">
+                space-between
+              </button>
+              <button class="botao" data-id="space-around">space-around</button>
+              <button class="botao" data-id="space-evenly">space-evenly</button>
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="justify-content"
+                data-code="fProp"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="justify-content"
+                data-code="fProp"
+              >
+                column
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp">row</span>; </mark>
+              </div>
+              <div class="demo__code-prop">
+                <mark
+                  >justify-content: <span class="prop">flex-start</span>;
+                </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- ALIGN ITEMS AXIS-CROSS -->
+      <details>
+        <summary>align-items</summary>
+        <section id="align-items">
+          <p>
+            O align-items alinha os flex itens de acordo com o eixo transversal
+            "cross-axis" do container. O alinhamento é diferente para quando os
+            itens estão em colunas ou linhas.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade align-items</legend>
+
+              <button class="botao ativo" data-id="stretch">stretch</button>
+              <button class="botao" data-id="flex-start">flex-start</button>
+              <button class="botao" data-id="flex-end">flex-end</button>
+              <button class="botao" data-id="center">center</button>
+              <button class="botao" data-id="baseline">baseline</button>
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="align-items"
+                data-code="fProp1"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="align-items"
+                data-code="fProp1"
+              >
+                column
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp1">row</span>; </mark>
+              </div>
+              <div class="demo__code-prop">
+                <mark>align-items: <span class="prop">stretch</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1" style="padding-top: 20px">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- ALIGN SELF AXIS-CROSS -->
+      <details>
+        <summary>align-self</summary>
+        <section id="align-self">
+          <p>
+            O align-self serve para definirmos o alinhamento específico de um
+            único flex item dentro do nosso container. Caso um valor seja
+            atribuído, ele passara por cima do que for atribuído no align-items
+            do container..
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade align-self</legend>
+
+              <button class="botao ativo" data-id="auto">auto</button>
+              <button class="botao" data-id="stretch">stretch</button>
+              <button class="botao" data-id="flex-start">flex-start</button>
+              <button class="botao" data-id="flex-end">flex-end</button>
+              <button class="botao" data-id="center">center</button>
+              <button class="botao" data-id="baseline">baseline</button>
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="align-self"
+                data-code="fProp2"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="align-self"
+                data-code="fProp2"
+              >
+                column
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp2">row</span>; </mark>
+              </div>
+              <div class="demo__code-prop">align-items: flex-start;</div>
+              }<br />
+
+              .container-flex div:nth-child(3) {
+              <div class="demo__code-prop">
+                <mark>align-self: <span class="prop">auto</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+              <div class="cor1">bloco4</div>
+              <div class="cor2">bloco5</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- ALIGN CONTENT AXIS-MAIN -->
+      <details>
+        <summary>align-content</summary>
+        <section id="align-content">
+          <p>
+            Alinha as linhas do container em relação ao eixo principal
+            "main-axis". A propriedade só funciona se existir mais de uma linha
+            de flex-itens. Para isso o flex-wrap precisa ser wrap.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade align-content</legend>
+
+              <button class="botao ativo" data-id="stretch">stretch</button>
+              <button class="botao" data-id="flex-start">flex-start</button>
+              <button class="botao" data-id="flex-end">flex-end</button>
+              <button class="botao" data-id="center">center</button>
+              <button class="botao" data-id="space-between">
+                space-between
+              </button>
+              <button class="botao" data-id="space-around">space-around</button>
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="align-content"
+                data-code="fProp3"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="align-content"
+                data-code="fProp3"
+              >
+                column
+              </button>
+              <br />
+
+              <button class="opBloco" data-id="+" data-ref="align-content">
+                + Blocos
+              </button>
+              <button class="opBloco" data-id="-" data-ref="align-content">
+                - Blocos
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp3">row</span>; </mark>
+              </div>
+              <div class="demo__code-prop">flex-wrap: wrap;</div>
+              <div class="demo__code-prop">
+                <mark>align-content: <span class="prop">stretch</span>; </mark>
+              </div>
+              }<br />
+
+              .container-flex div{
+              <div class="demo__code-prop">width: 45%;</div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+              <div class="cor1">bloco4</div>
+              <div class="cor2">bloco5</div>
+              <div class="cor3">bloco6</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- FLEX GROW -->
+      <details>
+        <summary>flex-grow</summary>
+        <section id="flex-grow">
+          <p>
+            Define a habilidade de um flex item crescer. Por padrão o valor é
+            zero, assim os flex itens ocupam um tamanho máximo relacionado o
+            conteúdo interno deles ou ao width definido.
+            <br />
+            Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma
+            largura e vão ocupar 100% do container. Digo tentarão pois caso um
+            elemento possua um conteúdo muito largo, ele irá respeitar o mesmo.
+            <br />
+            Se você tiver uma linha com quatro itens, onde três são flex-grow: 1
+            e um flex-grow: 2, o flex-grow: 2 tentará ocupar 2 vezes mais espaço
+            extra do que os outros elementos.
+            <br />
+            OBS: justify-content não funciona em items com flex-grow definido.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade flex-grow</legend>
+
+              <button class="botao ativo" data-id="0">0</button>
+              <button class="botao" data-id="1">1</button>
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="flex-grow"
+                data-code="fProp4"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="flex-grow"
+                data-code="fProp4"
+              >
+                column
+              </button>
+              <br />
+
+              <button class="opBloco" data-id="+" data-ref="flex-grow">
+                + Blocos
+              </button>
+              <button class="opBloco" data-id="-" data-ref="flex-grow">
+                - Blocos
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp4">row</span>; </mark>
+              </div>
+              }<br />
+
+              .container-flex div:nth-child(3) {
+              <div class="demo__code-prop">
+                <mark>flex-grow: <span class="prop">0</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- FLEX SHRINK -->
+      <details>
+        <summary>flex-shrink</summary>
+        <section id="flex-shrink">
+          <p>Define a capacidade de redução de tamanho do item..</p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade flex-shrink</legend>
+
+              <button class="botao ativo" data-id="1" data-ref="all">
+                shrink 1 em todos
+              </button>
+              <button class="botao" data-id="0" data-ref="all">
+                shrink 0 em todos
+              </button>
+              <button class="botao ativo" data-id="1" data-ref="u3">
+                shrink 1 no Bloco3
+              </button>
+              <button class="botao" data-id="0" data-ref="u3">
+                shrink 0 no Bloco3
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              }<br />
+
+              .container-flex div {
+              <div class="demo__code-prop">
+                <mark>flex-shrink: <span class="prop1">1</span>; </mark>
+              </div>
+              <div class="demo__code-prop">width: 33%;</div>
+              }<br />
+
+              .container-flex div:nth-child(3) {
+              <div class="demo__code-prop">
+                <mark>flex-shrink: <span class="prop">1</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+              <div class="cor1">bloco4</div>
+            </div>
+          </div>
+        </section>
+      </details>
+
+      <!-- FLEX BASIS -->
+      <details open>
+        <summary>flex-basis</summary>
+        <section id="flex-basis">
+          <p>
+            Indica o tamanho inicial do flex item antes da distribuição do
+            espaço restante. O padrão, ele faz com que a largura da base seja
+            igual a do item.
+          </p>
+          <div class="botoes">
+            <fieldset>
+              <legend>propriedade flex-basis</legend>
+
+              <button class="botao ativo" data-id="auto">auto</button>
+              <button class="botao" data-id="0">0</button>
+              <button class="botao" data-id="150px">150px</button>
+              <button class="botao" data-id="30%">30%</button>
+              <span
+                ><input type="checkbox" class="botao" data-id="wid" />width -
+                25%</span
+              >
+            </fieldset>
+
+            <fieldset class="comandos">
+              <legend>comandos</legend>
+              <p>flex-direction</p>
+              <button
+                class="opDirection ativo"
+                data-id="row"
+                data-ref="flex-basis"
+                data-code="fProp5"
+              >
+                row
+              </button>
+              <button
+                class="opDirection"
+                data-id="column"
+                data-ref="flex-basis"
+                data-code="fProp5"
+              >
+                column
+              </button>
+            </fieldset>
+
+            <fieldset class="demo__code">
+              <legend>css</legend>
+
+              .container-flex {
+              <div class="demo__code-prop">display: flex;</div>
+              <div class="demo__code-prop">
+                <mark>flex-direction: <span id="fProp5">row</span>; </mark>
+              </div>
+              }<br />
+
+              .container-flex div {
+              <div class="demo__code-prop" id="wid" style="display: none">
+                <mark> width: 25%; </mark>
+              </div>
+              <div class="demo__code-prop">
+                <mark>flex-basis: <span class="prop1">auto</span>; </mark>
+              </div>
+              }<br />
+            </fieldset>
+          </div>
+
+          <div class="painel">
+            blocos
+            <div class="container-flex">
+              <div class="cor1">bloco1</div>
+              <div class="cor2">bloco2</div>
+              <div class="cor3">bloco3</div>
+            </div>
+          </div>
+        </section>
+      </details>
+    </div>
+
+    <script>
+      //JS add remove blocos
+      let botoes = document.querySelectorAll(".opBloco");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+          let ref = evt.currentTarget.dataset.ref;
+          let painel = document.querySelector(`#${ref} .container-flex`);
+
+          if (valor === "+") {
+            let blc = document.createElement("div");
+            let cr = (painel.childElementCount % 3) + 1;
+            blc.className = "cor" + cr;
+            blc.innerHTML = "bloco" + (painel.childElementCount + 1);
+
+            painel.appendChild(blc);
+          } else if (valor === "-") {
+            painel.removeChild(painel.lastElementChild);
+          }
+        };
+      });
+
+      //JS change direction flex
+      botoes = document.querySelectorAll(".opDirection");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+          let ref = evt.currentTarget.dataset.ref;
+          let code = evt.currentTarget.dataset.code;
+          let painel = document.querySelector(`#${ref} .container-flex`);
+          let scode = document.querySelector(`#${code}`);
+          console.log(valor, painel.lastElementChild);
+
+          painel.style.flexDirection = valor;
+          scode.textContent = valor;
+
+          document
+            .querySelectorAll(`.opDirection[data-ref*="${ref}"]`)
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade Display
+      botoes = document.querySelectorAll("#display .botao");
+      document.querySelector("#display .container-flex").style.display =
+        "block";
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector("#display .container-flex");
+          painel.style.display = valor;
+          let prop = document.querySelector("#display .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#display .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade flex-direction
+      botoes = document.querySelectorAll("#flex-direction .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#flex-direction .container-flex"
+          );
+          painel.style.flexDirection = valor;
+          let prop = document.querySelector("#flex-direction .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#flex-direction .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade flex-wrap
+      botoes = document.querySelectorAll("#flex-wrap .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector("#flex-wrap .container-flex");
+          painel.style.flexWrap = valor;
+          let prop = document.querySelector("#flex-wrap .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#flex-wrap .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade order
+      botoes = document.querySelectorAll("#order .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#order .container-flex div:nth-child(3)"
+          );
+          painel.style.order = valor;
+          let prop = document.querySelector("#order .prop");
+          prop.textContent = valor;
+        };
+      });
+
+      //JS propriedade justify-content
+      botoes = document.querySelectorAll("#justify-content .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#justify-content .container-flex"
+          );
+          painel.style.justifyContent = valor;
+          let prop = document.querySelector("#justify-content .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#justify-content .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade align-items
+      botoes = document.querySelectorAll("#align-items .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector("#align-items .container-flex");
+          painel.style.alignItems = valor;
+          let prop = document.querySelector("#align-items .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#align-items .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade align-self
+      botoes = document.querySelectorAll("#align-self .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#align-self .container-flex div:nth-child(3)"
+          );
+          painel.style.alignSelf = valor;
+          let prop = document.querySelector("#align-self .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#align-self .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade align-content
+      botoes = document.querySelectorAll("#align-content .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector("#align-content .container-flex");
+          painel.style.alignContent = valor;
+          let prop = document.querySelector("#align-content .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#align-content .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade flex-grow
+      botoes = document.querySelectorAll("#flex-grow .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#flex-grow .container-flex div:nth-child(2)"
+          );
+          painel.style.flexGrow = valor;
+          let prop = document.querySelector("#flex-grow .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#flex-grow .botao")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade flex-shrink
+      botoes = document.querySelectorAll("#flex-shrink .botao[data-ref^=all]");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          //let painel = document.querySelector("#flex-shrink .container-flex div:nth-child(3)");
+          let painel = document.querySelectorAll(
+            "#flex-shrink .container-flex div"
+          );
+
+          painel.forEach((p) => (p.style.flexShrink = valor));
+
+          let prop = document.querySelector("#flex-shrink .prop1");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#flex-shrink .botao[data-ref^=all]")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      botoes = document.querySelectorAll("#flex-shrink .botao[data-ref^=u3]");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelector(
+            "#flex-shrink .container-flex div:nth-child(3)"
+          );
+          painel.style.flexShrink = valor;
+
+          let prop = document.querySelector("#flex-shrink .prop");
+          prop.textContent = valor;
+
+          document
+            .querySelectorAll("#flex-shrink .botao[data-ref^=u3]")
+            .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+          evt.currentTarget.classList.add("ativo");
+        };
+      });
+
+      //JS propriedade flex-basis
+      botoes = document.querySelectorAll("#flex-basis .botao");
+
+      botoes.forEach((btn) => {
+        btn.onclick = (evt) => {
+          let valor = evt.currentTarget.dataset.id;
+
+          let painel = document.querySelectorAll(
+            "#flex-basis .container-flex div"
+          );
+
+          if (valor === "wid") {
+
+            let prop = document.querySelector("#wid");
+            if (evt.currentTarget.checked) {
+              painel.forEach((p) => (p.style.width = "25%"));
+              prop.style.removeProperty('display')
+            } else {
+              painel.forEach((p) => (p.style.removeProperty('width') ));
+              prop.style.display = "none"
+            }
+          } else {
+            painel.forEach((p) => (p.style.flexBasis = valor));
+
+            let prop = document.querySelector("#flex-basis .prop1");
+            prop.textContent = valor;
+
+            document
+              .querySelectorAll("#flex-basis .botao")
+              .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+            evt.currentTarget.classList.add("ativo");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
