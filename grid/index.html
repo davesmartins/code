@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3><code>CSS GRID</code>:</h3>
+
+    <!-- DISPLAY -->
+    <details>
+      <summary>display</summary>
+      <section id="display">
+        <p>Define o elemento como um grid container..</p>
+        <div class="botoes">
+          <fieldset>
+            <legend>propriedade display</legend>
+
+            <button class="botao ativo" data-id="block">block</button>
+            <button class="botao" data-id="grid">grid</button>
+            <button class="botao" data-id="inline-grid">inline-grid</button>
+          </fieldset>
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">
+              <mark>display: <span class="prop">block</span>; </mark>
+            </div>
+            }<br />
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor2">bloco2</div>
+            <div class="cor3">bloco3</div>
+            <div class="cor4">bloco4</div>
+            <div class="cor5">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <!-- GRID TEMPLATE -->
+    <details >
+      <summary>grid-template-(columns/rows)</summary>
+      <section id="grid-template">
+        <p>
+          Define o número total de colunas e linhas que serão criadas no grid.
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>grid-template-columns</legend>
+            <button class="botao ativo" data-id="1fr 1fr 1fr" data-ref="col">
+              1fr 1fr 1fr
+            </button>
+            <button class="botao" data-id="1fr 2fr 1fr" data-ref="col">
+              1fr 2fr 1fr
+            </button>
+            <button class="botao" data-id="100px 1fr 100px" data-ref="col">
+              100px 1fr 100px
+            </button>
+            <button class="botao" data-id="minmax(200px, 1fr) 1fr 1fr" data-ref="col">
+              minmax(200px, 1fr) 1fr 1fr
+            </button>
+            <button class="botao" data-id="100px repeat(3, 1fr)" data-ref="col">
+              100px repeat(3, 1fr)
+            </button>
+            <button class="botao" data-id="repeat(auto-fit, 200px)" data-ref="col">
+              repeat(auto-fit, 200px)
+            </button>
+
+            <button class="botao" data-id="repeat(auto-fill, minmax(75px, 1fr))" data-ref="col">
+              repeat(auto-fill, minmax(75px, 1fr))
+            </button>
+
+            <button class="botao" data-id="repeat(auto-fit, minmax(75px, 1fr))" data-ref="col">
+              repeat(auto-fit, minmax(75px, 1fr))
+            </button>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>grid-template-rows</legend>
+            <button class="botao ativo" data-id="50px 100px" data-ref="row">
+              50px 100px
+            </button>
+            <button class="botao" data-id="100px 100px" data-ref="row">
+              100px 100px
+            </button>
+          </fieldset>
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop">
+              <mark>grid-template-columns: <span class="propc">1fr 1fr 1fr</span>;
+              </mark>
+            </div>
+            <div class="demo__code-prop">
+              <mark>grid-template-rows: <span class="propr">50px 100px</span>;
+              </mark>
+            </div>
+            }<br />
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor1">bloco2</div>
+            <div class="cor1">bloco3</div>
+            <div class="cor1">bloco4</div>
+            <div class="cor1">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <!-- GRID AUTO -->
+    <details >
+      <summary>grid-auto-(columns/rows)</summary>
+      <section id="grid-auto">
+        <p>
+          Define o tamanho das colunas e linhas do grid implícito (gerado automaticamente, quando algum elemento é posicionado em uma coluna que não foi definida)..
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>grid-auto-columns</legend>
+            <button class="botao ativo" data-id="none" data-ref="col" data-css="code-3-1">
+              none
+            </button>
+            <button class="botao" data-id="100px" data-ref="col" data-css="code-3-1">
+              100px
+            </button>
+            <button class="botao" data-id="200px" data-ref="col" data-css="code-3-1">
+              200px
+            </button>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>grid-auto-rows</legend>
+            <button class="botao ativo" data-id="none" data-ref="row" data-css="code-3-2">
+              none
+            </button>
+            <button class="botao" data-id="100px" data-ref="row" data-css="code-3-2">
+              100px
+            </button>
+            <button class="botao" data-id="200px" data-ref="row" data-css="code-3-2">
+              200px
+            </button>
+          </fieldset>
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop"  id="code-3-1" style="display:none">
+              <mark>grid-auto-columns: <span class="propc">100px</span>;
+              </mark>
+            </div>
+            <div class="demo__code-prop" id="code-3-2" style="display:none">
+              <mark>grid-auto-rows: <span class="propr">100px</span>;
+              </mark>
+            </div>
+            }<br />
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor1">bloco2</div>
+            <div class="cor1">bloco3</div>
+            <div class="cor1">bloco4</div>
+            <div class="cor1">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <!-- GAP -->
+    <details >
+      <summary>grid-gap</summary>
+      <section id="grid-gap">
+        <p>
+          Define o gap (gutter) entre os elementos do grid. <br />
+          gap: 20px - Define 20px entre os elementos do grid (linha e coluna).<br />
+          column-gap: 20px - Define 20px de distância entre as colunas.<br />
+          row-gap: 20px - Define 20px de distância entre as linhas.
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>grid-gap</legend>
+            <button class="botao ativo" data-id="none" data-ref="col" data-css="code-4-1">
+              none
+            </button>
+            <button class="botao" data-id="gap:10px" data-ref="col" data-css="code-4-1">
+              gap: 10px
+            </button>
+            <button class="botao" data-id="column-gap:20px" data-ref="col" data-css="code-4-1">
+              column-gap: 20px
+            </button>
+            <button class="botao" data-id="row-gap:20px" data-ref="col" data-css="code-4-1">
+              row-gap: 20px
+            </button>
+            
+          </fieldset>
+
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop"  id="code-4-1" style="display:none">
+              <mark> <span class="propc">gap: 100px</span>;
+              </mark>
+            </div>
+            }<br />
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor1">bloco2</div>
+            <div class="cor1">bloco3</div>
+            <div class="cor1">bloco4</div>
+            <div class="cor1">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <!-- GRID TEMPLATE NOME LINHAS -->
+    <details >
+      <summary>grid-template (Linhas Nomeadas)</summary>
+      <section id="grid-template-named">
+        <p>
+          Embora as linhas de grade sempre possam ser referenciadas por seu índice numérico, as 
+          linhas nomeadas podem tornar as propriedades de posicionamento da grade mais fáceis de entender e manter. 
+          As linhas podem ser nomeadas explicitamente nas propriedades grid-template-rows e grid-template-columns , 
+          ou implicitamente nomeadas criando áreas de grade nomeadas com a propriedade grid-template-areas .
+        </p>
+        <img src="img/layout.png" alt="">
+        <div class="botoes">
+          <fieldset style="flex-direction: column;">
+            <legend>Linhas Nomeadas</legend>
+            <button class="botao" data-id="clean"  >
+              limpar layout
+            </button>
+            <button class="botao" data-id="def"  >
+              layout default
+            </button>
+            <button class="botao" data-id="defN"  >
+              layout default names
+            </button>
+
+
+            <span class="flexConfig" data-css="code-5-1-c" data-grid="column">
+              <div >header :: column</div>  <input type="text" /> / <input type="text" />
+            </span>
+            <span class="flexConfig"  data-css="code-5-1-r" data-grid="row">
+              <div >header :: row</div> <input type="text" /> / <input type="text" />
+            </span>
+           
+            <span  class="flexConfig"  data-css="code-5-2-c" data-grid="column">
+              <div>main :: column</div> <input type="text" /> / <input type="text" />
+            </span>
+            <span  class="flexConfig" data-css="code-5-2-r" data-grid="row">
+              <div>main :: row</div> <input type="text" /> / <input type="text" />
+            </span>
+
+            <span  class="flexConfig" data-css="code-5-3-c" data-grid="column">
+              <div>aside :: column</div> <input type="text" /> / <input type="text" />
+            </span>
+            <span  class="flexConfig" data-css="code-5-3-r" data-grid="row">
+              <div>aside :: row</div> <input type="text" /> / <input type="text" />
+            </span>
+           
+            <span  class="flexConfig" data-css="code-5-4-c" data-grid="column">
+              <div>footer :: column</div> <input type="text" /> / <input type="text" />
+            </span>
+            <span  class="flexConfig" data-css="code-5-4-r" data-grid="row">
+              <div>footer :: row</div> <input type="text" /> / <input type="text" />
+            </span>
+            
+          </fieldset>
+
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            }<br />
+
+
+            .container-grid div:nth-child(1) {            
+            <div class="demo__code-prop"  id="code-5-1-c">
+              <mark> <span class="propc"></span>
+              </mark>
+            </div>            
+            <div class="demo__code-prop"  id="code-5-1-r">
+              <mark> <span class="propc"></span>
+              </mark>
+            </div>
+            }<br />
+
+            .container-grid div:nth-child(2) {           
+              <div class="demo__code-prop"  id="code-5-2-c">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>            
+              <div class="demo__code-prop"  id="code-5-2-r">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>
+            }<br />
+
+            .container-grid div:nth-child(3) {           
+              <div class="demo__code-prop"  id="code-5-3-c">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>            
+              <div class="demo__code-prop"  id="code-5-3-r">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>
+              }<br />
+              
+            .container-grid div:nth-child(4) {             
+              <div class="demo__code-prop"  id="code-5-4-c">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>            
+              <div class="demo__code-prop"  id="code-5-4-r">
+                <mark> <span class="propc"></span>
+                </mark>
+              </div>
+              }<br />
+
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">header</div>
+            <div class="cor2">main</div>
+            <div class="cor3">aside</div>
+            <div class="cor4">footer</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+
+    <!-- GRID TEMPLATE AREAS -->
+    <details open>
+      <summary>grid-template-areas (Linhas Nomeadas)</summary>
+      <section id="grid-template-areas">
+        <p>
+          Define áreas específicas no grid. O ponto (.) pode ser utilizado para criar áreas vazias.
+        </p>
+        <div class="botoes">
+          <fieldset style="align-content: center;">
+            <legend>Áreas</legend>
+            <button class="botao" data-id="clean"  >
+              <br /> 
+              limpar layout<br /> 
+              <br /> 
+            </button>
+            <button class="botao" data-id="'header header header' 'princi princi side' 'footer footer footer'" >
+              header header header<br /> 
+              princi princi side<br /> 
+              footer footer footer<br /> 
+            </button>
+            <button class="botao" data-id="'header header side' 'princi princi side' 'footer footer side'"  >
+              header header side<br /> 
+              princi princi side<br /> 
+              footer footer side<br /> 
+            </button>
+            <button class="botao" data-id="'header header header' '. princi .' 'footer footer side'"  >
+              header header header<br /> 
+              . princi .<br /> 
+              footer footer side<br /> 
+            </button>
+            <button class="botao" data-id="'. header header .' '. princi side .' '. footer footer .'"  >
+              . header header .<br /> 
+              . princi side .<br /> 
+              . footer footer .<br /> 
+            </button>
+            
+          </fieldset>
+
+
+          <fieldset class="demo__code" style="width:300px">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop" >
+              <mark> 
+                <span class="propc" style="display:none">     
+                  <span></span><br />               
+                  <span></span><br />
+                  <span></span><br />
+                  <span></span><br />
+                </span>
+              </mark>
+            </div>
+
+            }<br />
+
+            .container-grid div:nth-child(1) {                    
+            <div class="demo__code-prop" >
+              <mark> grid-area: header;
+              </mark>
+            </div>
+            }<br />
+            .container-grid div:nth-child(2) {                    
+            <div class="demo__code-prop" >
+              <mark> grid-area: princi;
+              </mark>
+            </div>
+            }<br />
+            .container-grid div:nth-child(3) {                    
+            <div class="demo__code-prop" >
+              <mark> grid-area: side;
+              </mark>
+            </div>
+            }<br />
+            .container-grid div:nth-child(4) {                    
+            <div class="demo__code-prop" >
+              <mark> grid-area: footer;
+              </mark>
+            </div>
+            }<br />
+
+
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">header</div>
+            <div class="cor2">main</div>
+            <div class="cor3">aside</div>
+            <div class="cor4">footer</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+
+
+
+
+
+  </div>
+
+  <script>
+    //JS propriedade Display
+    botoes = document.querySelectorAll("#display .botao");
+    document.querySelector("#display .container-grid").style.display = "block";
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#display .container-grid");
+        painel.style.display = valor;
+        let prop = document.querySelector("#display .prop");
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#display .botao")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+    //JS propriedade Grid-Template
+    botoes = document.querySelectorAll("#grid-template .botao[data-ref=col]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#grid-template .container-grid");
+        painel.style.gridTemplateColumns = valor;
+        let prop = document.querySelector("#grid-template .propc");
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#grid-template .botao[data-ref=col]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+   
+    botoes = document.querySelectorAll("#grid-template .botao[data-ref=row]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#grid-template .container-grid");
+        painel.style.gridTemplateRows = valor;
+        let prop = document.querySelector("#grid-template .propr");
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#grid-template .botao[data-ref=row]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+ 
+    //JS propriedade Grid-auto
+    botoes = document.querySelectorAll("#grid-auto .botao[data-ref=col]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#grid-auto .container-grid");
+        painel.style.gridAutoColumns = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+        if (valor === "none"){
+          prop.parentNode.parentNode.style.display = valor
+          painel.style.removeProperty('grid-auto-columns')
+        }else{
+          prop.parentNode.parentNode.style.removeProperty('display')
+        }
+
+        document
+          .querySelectorAll("#grid-auto .botao[data-ref=col]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+    
+    botoes = document.querySelectorAll("#grid-auto .botao[data-ref=row]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#grid-auto .container-grid");
+        painel.style.gridAutoRows = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+        if (valor === "none"){
+          prop.parentNode.parentNode.style.display = valor
+          painel.style.removeProperty('grid-auto-rows')
+        }else{
+          prop.parentNode.parentNode.style.removeProperty('display')
+        }
+
+        document
+          .querySelectorAll("#grid-auto .botao[data-ref=row]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+ 
+    //JS propriedade Grid-gap
+    botoes = document.querySelectorAll("#grid-gap .botao");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#grid-gap .container-grid");
+        
+        painel.style.removeProperty('gap')
+        painel.style.removeProperty('column-gap')
+        painel.style.removeProperty('row-gap')
+        
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+        if (valor === "none"){
+          prop.parentNode.parentNode.style.display = valor
+        }else{
+          prop.parentNode.parentNode.style.removeProperty('display')
+          painel.style.setProperty(valor.split(":")[0]  , valor.split(":")[1]) 
+        }
+
+        document
+          .querySelectorAll("#grid-gap .botao")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+       
+ 
+    //JS propriedade Grid linha nomeada
+    let fields = document.querySelectorAll("#grid-template-named input");
+
+    fields.forEach((fld) => {
+      fld.onchange = (evt) => {
+        
+        //console.log(evt.currentTarget)
+        //if (evt.currentTarget.nextSibling.nextSibling.nodeName === "INPUT"){
+
+          let valor = "grid-"+evt.currentTarget.parentNode.dataset.grid+": "
+        if (evt.currentTarget.nextSibling.nextSibling != null){
+           valor += evt.currentTarget.value +" / "+evt.currentTarget.nextSibling.nextSibling.value
+        }else{
+          valor += evt.currentTarget.previousSibling.previousSibling.value +" / "+evt.currentTarget.value
+        }
+
+        let prop = document.querySelector( `#${evt.currentTarget.parentNode.dataset.css} span` );
+        prop.textContent = valor+";";
+
+        let painel = document.querySelector(`#grid-template-named .container-grid div:nth-child(${evt.currentTarget.parentNode.dataset.css[7]})`);
+        painel.style.setProperty(valor.split(":")[0]  , valor.split(":")[1]) 
+
+
+      };
+    });
+
+    botoes = document.querySelectorAll("#grid-template-named .botao");       
+ 
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+        
+        if (valor === "clean"){
+
+          let fields = document.querySelectorAll("#grid-template-named input")
+          fields.forEach((f)=>{
+            f.value = ""
+          })
+          let prop = document.querySelectorAll( `div[id^=code-5] span` )
+          prop.forEach((f)=>{
+            f.textContent = ""
+          })
+
+          let paineis = document.querySelectorAll(`#grid-template-named .container-grid div`);
+          paineis.forEach((f)=>{
+            f.style.removeProperty('grid-column')
+            f.style.removeProperty('grid-row')
+          })
+
+        }else if (valor === "def"){
+          let fields = document.querySelectorAll("#grid-template-named input")
+          fields.item(0).value = "1"
+          fields.item(1).value = "4"
+          const e = new Event("change");
+          fields.item(1).dispatchEvent(e);
+          
+          fields.item(4).value = "2"
+          fields.item(5).value = "4"
+          fields.item(5).dispatchEvent(e);
+
+          
+          fields.item(8).value = "1"
+          fields.item(9).value = "2"
+          fields.item(9).dispatchEvent(e);
+          fields.item(10).value = "2"
+          fields.item(11).value = "3"
+          fields.item(11).dispatchEvent(e);
+
+          fields.item(12).value = "1"
+          fields.item(13).value = "4"
+          fields.item(13).dispatchEvent(e);
+        }else if (valor === "defN"){
+          let fields = document.querySelectorAll("#grid-template-named input")
+          fields.item(0).value = "site-start"
+          fields.item(1).value = "site-end"
+          const e = new Event("change");
+          fields.item(1).dispatchEvent(e);
+          
+          fields.item(4).value = "main-start"
+          fields.item(5).value = "site-end"
+          fields.item(5).dispatchEvent(e);
+
+          
+          fields.item(8).value = "site-start"
+          fields.item(9).value = "main-start"
+          fields.item(9).dispatchEvent(e);
+          fields.item(10).value = "topo-end"
+          fields.item(11).value = "rod-start"
+          fields.item(11).dispatchEvent(e);
+
+          fields.item(12).value = "site-start"
+          fields.item(13).value = "site-end"
+          fields.item(13).dispatchEvent(e);
+        }
+
+
+      };
+    });
+ 
+ 
+    botoes = document.querySelectorAll("#grid-template-areas .botao");       
+ 
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        const valor = evt.currentTarget.dataset.id;
+
+        const painel = document.querySelector("#grid-template-areas .container-grid")
+        const prop = document.querySelector( `#grid-template-areas .propc` );
+        
+        if (valor === "clean"){
+
+          painel.style.removeProperty('grid-template-areas')
+          prop.style.display="none";
+          
+        }else {
+          
+          painel.style.gridTemplateAreas = valor;
+          prop.style.display="inline";
+          prop.childNodes[1].textContent=`grid-template-areas:`
+          prop.childNodes[4].textContent=`${valor.split("' '")[0]}'`
+          prop.childNodes[7].textContent=`'${valor.split("' '")[1]}'`
+          prop.childNodes[10].textContent=`'${valor.split("' '")[2]};`
+          console.log(painel.style.gridTemplateAreas)
+
+         
+        }
+
+
+      };
+    });
+ 
+ 
+ 
+  </script>
+</body>
+
+</html>
