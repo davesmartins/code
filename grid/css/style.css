@@ -44,9 +44,9 @@
     margin: 4px;
 }
 
-.botoes>button {
+.botoes>button, .botoes>fieldset>button {
     padding: 2px;
-    margin: 4px;
+    margin: 6px;
 }
 
 .botao {
@@ -182,6 +182,25 @@ section img {
     grid-area: footer;
 }
 
+#align-justify-items .container-grid, #align-justify-self .container-grid, #align-justify-content .container-grid {
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 100px;
+    grid-gap: 5px;
+}
+
+#align-justify-content .container-grid {
+    grid-template-columns: repeat(3, 150px);
+    height: 300px;
+}
+
+#align-justify-content .painel {
+    height: 320px;
+}
+
+#align-justify-self .container-grid  div:nth-child(5){
+    border: dotted 2px rgb(23, 24, 22)
+}
 
 /* 
 #grid-template-named .container-grid div:nth-child(1)

@@ -376,7 +376,7 @@
 
 
     <!-- GRID TEMPLATE AREAS -->
-    <details open>
+    <details >
       <summary>grid-template-areas (Linhas Nomeadas)</summary>
       <section id="grid-template-areas">
         <p>
@@ -385,7 +385,7 @@
         <div class="botoes">
           <fieldset style="align-content: center;">
             <legend>Áreas</legend>
-            <button class="botao" data-id="clean"  >
+            <button class="botao ativo" data-id="clean"  >
               <br /> 
               limpar layout<br /> 
               <br /> 
@@ -473,7 +473,280 @@
       </section>
     </details>
 
+    <!-- ALIGN JUSTIFY ITENS -->
+    <details >
+      <summary>(align | justify)-items</summary>
+      <section id="align-justify-items">
+        <p>
+          <b>justify-items</b> 
+          Justifica o conteúdo dos itens do grid em relação ao eixo x (horizontal). Justifica em relação a célula.<br />
 
+          <b>align-items</b> 
+Alinha o conteúdo dos itens do grid em relação ao eixo y (vertical). Alinha em relação a célula.<br />
+valores padrões: stretch
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>justify-items</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="justify" data-css="code-7-1">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="justify" data-css="code-7-1">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="justify" data-css="code-7-1">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="justify" data-css="code-7-1">
+              center
+            </button>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>align-items</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="align" data-css="code-7-2">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="align" data-css="code-7-2">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="align" data-css="code-7-2">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="align" data-css="code-7-2">
+              center
+            </button>
+          </fieldset>
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop">grid-template-columns: 1fr 1fr 1fr;</div>
+            <div class="demo__code-prop">grid-auto-rows: 100px;</div>    
+
+            <div class="demo__code-prop"  id="code-7-1" >
+              <mark>justify-items: <span class="propc">stretch</span>;
+              </mark>
+            </div>
+            <div class="demo__code-prop" id="code-7-2" >
+              <mark>align-items: <span class="propr">stretch</span>;
+              </mark>
+            </div>
+
+            }<br />
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          blocos
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor2">bloco2</div>
+            <div class="cor3">bloco3</div>
+            <div class="cor4">bloco4</div>
+            <div class="cor5">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+
+    <!-- ALIGN JUSTIFY SELF -->
+    <details >
+      <summary>(align | justify)-self</summary>
+      <section id="align-justify-self">
+        <p>
+          <b>justify-self</b> 
+          Justifica o item do grid em relação ao eixo x (horizontal). Justifica em relação a célula.<br />
+
+          <b>align-self</b> 
+Alinha o item do grid em relação ao eixo y (vertical). Alinha em relação a célula.<br />
+valores padrões: stretch
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>justify-self</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="justify" data-css="code-8-1">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="justify" data-css="code-8-1">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="justify" data-css="code-8-1">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="justify" data-css="code-8-1">
+              center
+            </button>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>align-self</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="align" data-css="code-8-2">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="align" data-css="code-8-2">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="align" data-css="code-8-2">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="align" data-css="code-8-2">
+              center
+            </button>
+          </fieldset>
+
+          <fieldset class="demo__code">
+            <legend>css</legend>
+
+            .container-grid {
+            <div class="demo__code-prop">display: grid;</div>
+            <div class="demo__code-prop">grid-template-columns: 1fr 1fr 1fr;</div>
+            <div class="demo__code-prop">grid-auto-rows: 100px;</div>  
+
+            }<br />
+
+
+            .container-grid div:nth-child(5) {
+            
+            <div class="demo__code-prop"  id="code-8-1" >
+              <mark>justify-self: <span class="propc">stretch</span>;
+              </mark>
+            </div>
+            <div class="demo__code-prop" id="code-8-2" >
+              <mark>align-self: <span class="propr">stretch</span>;
+              </mark>
+            </div>
+
+          }<br />
+
+
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          <!-- blocos -->
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor2">bloco2</div>
+            <div class="cor3">bloco3</div>
+            <div class="cor4">bloco4</div>
+            <div class="cor5">bloco5</div>
+            <div class="cor1">bloco6</div>
+            <div class="cor2">bloco7</div>
+            <div class="cor3">bloco8</div>
+            <div class="cor4">bloco9</div>
+          </div>
+        </div>
+      </section>
+    </details>
+
+
+    <!-- ALIGN JUSTIFY CONTENT -->
+    <details open>
+      <summary>(align | justify)-content </summary>
+      <section id="align-justify-content">
+        <p>
+          <b>justify-content</b> 
+          Justifica os itens do grid em relação ao eixo x (horizontal).<br />
+
+          <b>align-content</b> 
+          Alinha os itens do grid em relação ao eixo y (vertical).<br />
+valores padrões: stretch
+        </p>
+        <div class="botoes">
+          <fieldset>
+            <legend>justify-content</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="justify" data-css="code-9-1">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="justify" data-css="code-9-1">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="justify" data-css="code-9-1">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="justify" data-css="code-9-1">
+              center
+            </button>
+            <button class="botao" data-id="space-around" data-ref="justify" data-css="code-9-1">
+              space-around
+            </button>
+            <button class="botao" data-id="space-between" data-ref="justify" data-css="code-9-1">
+              space-between
+            </button>
+            <button class="botao" data-id="space-evenly" data-ref="justify" data-css="code-9-1">
+              space-evenly
+            </button>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>align-content</legend>
+            <button class="botao ativo" data-id="stretch" data-ref="align" data-css="code-9-2">
+              stretch
+            </button>
+            <button class="botao" data-id="start" data-ref="align" data-css="code-9-2">
+              start
+            </button>
+            <button class="botao" data-id="end" data-ref="align" data-css="code-9-2">
+              end
+            </button>
+            <button class="botao" data-id="center" data-ref="align" data-css="code-9-2">
+              center
+            </button>
+            <button class="botao" data-id="space-around" data-ref="align" data-css="code-9-2">
+              space-around
+            </button>
+            <button class="botao" data-id="space-between" data-ref="align" data-css="code-9-2">
+              space-between
+            </button>
+            <button class="botao" data-id="space-evenly" data-ref="align" data-css="code-9-2">
+              space-evenly
+            </button>
+
+          </fieldset>
+
+          <fieldset class="demo__code" style="width:650px">
+            <legend>css</legend>
+
+            .container-grid {
+              <div class="demo__code-prop">display: grid;</div>
+              <div class="demo__code-prop">grid-template-columns: repeat(3, 150px);</div>
+              <div class="demo__code-prop">grid-auto-rows: 100px;</div>    
+              <div class="demo__code-prop">height: 300px;</div>   
+  
+              <div class="demo__code-prop"  id="code-9-1" >
+                <mark>justify-content: <span class="propc">stretch</span>;
+                </mark>
+              </div>
+              <div class="demo__code-prop" id="code-9-2" >
+                <mark>align-content: <span class="propr">stretch</span>;
+                </mark>
+              </div>
+  
+              }<br />
+
+
+          </fieldset>
+        </div>
+
+        <div class="painel">
+          <!-- blocos -->
+          <div class="container-grid">
+            <div class="cor1">bloco1</div>
+            <div class="cor2">bloco2</div>
+            <div class="cor3">bloco3</div>
+            <div class="cor4">bloco4</div>
+            <div class="cor5">bloco5</div>
+          </div>
+        </div>
+      </section>
+    </details>
 
 
 
@@ -742,17 +1015,140 @@
           prop.childNodes[4].textContent=`${valor.split("' '")[0]}'`
           prop.childNodes[7].textContent=`'${valor.split("' '")[1]}'`
           prop.childNodes[10].textContent=`'${valor.split("' '")[2]};`
-          console.log(painel.style.gridTemplateAreas)
-
          
         }
 
+        document
+          .querySelectorAll("#grid-template-areas .botao")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
 
       };
     });
+   
+    //JS propriedade Align Justify Itens
+    botoes = document.querySelectorAll("#align-justify-items .botao[data-ref=justify]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-items .container-grid");
+        painel.style.justifyItems = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-items .botao[data-ref=justify]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+    
+    botoes = document.querySelectorAll("#align-justify-items .botao[data-ref=align]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-items .container-grid");
+        painel.style.alignItems = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-items .botao[data-ref=align]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
  
- 
- 
+    //JS propriedade Align Justify Self
+    botoes = document.querySelectorAll("#align-justify-self .botao[data-ref=justify]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-self .container-grid div:nth-child(5)");
+        painel.style.justifySelf = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-self .botao[data-ref=justify]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+    
+    botoes = document.querySelectorAll("#align-justify-self .botao[data-ref=align]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-self .container-grid div:nth-child(5)");
+        painel.style.alignSelf = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-self .botao[data-ref=align]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+    //JS propriedade Align Justify Self
+    botoes = document.querySelectorAll("#align-justify-content .botao[data-ref=justify]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-content .container-grid");
+        painel.style.justifyContent = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-content .botao[data-ref=justify]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+    
+    botoes = document.querySelectorAll("#align-justify-content .botao[data-ref=align]");
+
+    botoes.forEach((btn) => {
+      btn.onclick = (evt) => {
+        let valor = evt.currentTarget.dataset.id;
+
+        let painel = document.querySelector("#align-justify-content .container-grid");
+        painel.style.alignContent = valor;
+
+        let prop = document.querySelector( `#${evt.currentTarget.dataset.css} span` );
+        prop.textContent = valor;
+
+        document
+          .querySelectorAll("#align-justify-content .botao[data-ref=align]")
+          .forEach((botaoEl) => botaoEl.classList.remove("ativo"));
+        evt.currentTarget.classList.add("ativo");
+      };
+    });
+
+
+
   </script>
 </body>
 
