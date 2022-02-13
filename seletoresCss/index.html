@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seletores CSS</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3><code>Seletores Css</code>:</h3>
+
+    <div class="painel">
+
+      <div class="list">
+        <ul>
+          <!-- <li data-id="0" class="ativo"> * </li>
+          <li data-id="1"> Tag, h1</li>
+          <li>3</li>
+ -->
+        </ul>
+      </div>
+
+      <div class="main">
+        <fieldset id="main-texto">
+          <legend>Seletor </legend>
+          <div>a</div>
+          <div>b</div>
+        </fieldset>
+
+
+        <section id="iframeResult" class="result_output" style="overflow: auto;">
+
+
+
+          <div id="selectorResult" style="padding:5px;" class="noSel">
+            <div class="noSel">
+              <span class="markup">&lt;h1&gt;</span>
+                <h1>Tag H1
+              </h1>              
+              <span class="markup">&lt;/h1&gt;</span>
+              <br />
+              <span class="markup">&lt;h1 class="intro"&gt;</span>
+                <h1 class="intro">Outra Tag H1
+              </h1>              
+              <span class="markup">&lt;/h1&gt;</span>
+
+              <div id="helpIntro" style="">
+                <span class="markup">&lt;div class="intro"&gt;</span>
+                <div class="intro">
+                    <span class="markup">&lt;p&gt;</span>
+                  <p style="margin-top: 4px;">Nome Zezin 
+                    
+                      <span class="markup">&lt;span id="sobreNome"&gt;</span>
+                      <span id="sobreNome" style="">Silva.</span>
+                      <span class="markup">&lt;/span&gt;</span>
+                      
+                  </p>
+                      <span class="markup">&lt;/p&gt;</span>
+                <br />
+                  <span class="markup">&lt;p id="ender"&gt;</span><p id="ender" style="">vivo aqui em jf </p><span class="markup">&lt;/p&gt;</span>
+
+                  <br />
+                 
+
+                  <span class="markup">&lt;span &gt;</span>
+                  <span id="sobreNome" style="">Profissão: Não tenho.</span>
+                  <span class="markup">&lt;/span&gt;</span>
+
+                  <br />
+                 <span class="markup">&lt;p&gt;</span> <p style="margin-bottom: 4px;">linguagens de interesse:</p><span
+                      class="markup">&lt;/p&gt;</span>
+                    
+
+                </div>
+                <span class="markup">&lt;/div&gt;</span>
+              </div>
+
+              <br>
+              <div class="helpUl" style="">
+                <span class="markup">&lt;ul id="Listfriends&gt;</span>
+                <ul id="Listfriends" style="margin-top:0px;margin-bottom:0px;">
+
+                  <li ><span
+                      class="markup">&lt;li&gt;</span>Goofy<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>Mickey<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>Daisy<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>Pluto<span class="markup">&lt;/li&gt;</span></li>
+                </ul>
+                <span class="markup">&lt;/ul&gt;</span>
+              </div>
+
+              <ul style="display:none;"></ul>
+              <p class="myquote" style=""><span class="markup">&lt;p class="myquote"&gt;</span>All my friends are
+                great!<span class="markup">&lt;br&gt;</span><br>But I really like Daisy!!<span
+                  class="markup">&lt;/p&gt;</span></p>
+
+              <p lang="it" title="Hello beautiful" style=""><span class="markup">&lt;p lang="it" title="Hello
+                  beautiful"&gt;</span>Ciao bella<span class="markup">&lt;/p&gt;</span></p>
+
+
+              <h3><span class="markup">&lt;h3&gt;</span>We are all animals!<span class="markup">&lt;/h3&gt;</span></h3>
+
+              <p style=""><span class="markup">&lt;p&gt;</span><span><b><span class="markup">&lt;b&gt;</span>My latest
+                    discoveries have led me to believe that we are all animals:<span
+                      class="markup">&lt;/b&gt;</span></b></span><span class="markup">&lt;/p&gt;</span></p>
+
+              <div class="helpTable" style="width: 220px;">
+                <span class="markup">&lt;table&gt;</span>
+                <ul style="display:none;"></ul>
+
+                <table cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr style="background-color: rgb(241, 241, 241);">
+                      <th style="">Name</th>
+                      <th style="">Type of Animal</th>
+                    </tr>
+                    <tr style="background-color: rgb(241, 241, 241);">
+                      <td style="">Mickey</td>
+                      <td style="">Mouse</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 241, 241);">
+                      <td style="">Goofey</td>
+                      <td style="">Dog</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 241, 241);">
+                      <td style="">Daisy</td>
+                      <td style="">Duck</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 241, 241);">
+                      <td style="">Pluto</td>
+                      <td style="">Dog</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <span class="markup">&lt;/table&gt;</span>
+              </div>
+
+              <div class="noSel newsletter"
+                style="background-color: rgb(153, 214, 255); border: 1px solid rgb(0, 153, 255); padding: 10px;">
+                <form>
+                  <h4>Subscribe to my newsletter:</h4>
+                  <div style="overflow:auto;">
+                    <div style="width:100px;float:left;">Name:</div>
+                    <div style="width:180px;float:left;"><input type="text" style="width: 150px;" class="markup"></div>
+                  </div>
+                  <div style="overflow:auto;">
+                    <div style="width:100px;float:left;">E-mail:</div>
+                    <div style="width:180px;float:left;"><input type="email" style="width: 150px;" class="markup"
+                        onchange="changeEmail(this)"></div>
+                  </div>
+                  <!--
+   <div style="width:65px;float:left;">Password:</div><div style="width:180px;float:left;"><input type="password" style="width:150px" name="password" value="password" /></div>
+   <div class="noSel" style="clear:both;"></div>      
+ -->
+                  <div class="noSel" style="margin-top:10px;">
+                    Female: <input name="rr" type="radio" id="rr1" checked="checked"
+                      style="outline: transparent solid 2px;">
+                    Male: <input name="rr" type="radio" id="rr2" style="outline: transparent solid 2px;">
+                    Other: <input name="rr" type="radio" id="rr3" disabled="disabled"
+                      style="outline: transparent solid 2px;">
+                  </div>
+                  <h4>Newscategories:</h4>
+                  <div style="overflow:auto;">
+                    <div style="width:60px;float:left;">Ducks:</div>
+                    <div style="width:20px;float:left;"><input id="cc1" type="checkbox" checked="checked"
+                        style="outline: transparent solid 2px;"></div>
+                  </div>
+                  <div style="overflow:auto;">
+                    <div style="width:60px;float:left;">Dogs:</div>
+                    <div style="width:20px;float:left;"><input id="cc2" type="checkbox"
+                        style="outline: transparent solid 2px;"></div>
+                  </div>
+                  <div style="overflow:auto;">
+                    <div style="width:60px;float:left;">Humans:</div>
+                    <div style="width:20px;float:left;"><input id="cc3" type="checkbox"
+                        style="outline: transparent solid 2px;"></div>
+                  </div>
+                  <div class="noSel" style="clear:both;"></div>
+                  <p class="noSel" style="">Your lucky number (between 1 and 10): <input type="number" min="1" max="10"
+                      value="7" onchange="changeLuckyNumber(this)" style=""></p>
+                  <!-- 
+  <input class="noSel" type="reset" value="Reset" style="outline:2px solid transparent" />
+  <input class="noSel" type="submit" value="Submit" style="outline:2px solid transparent" /> 
+  <input class="noSel" type="button" value="Cancel" style="outline:2px solid transparent" />
+  <div style="margin-top:10px;">
+   <div style="width:120px;float:left;text-align:center;">
+    <h4 style="margin:0px;font-size:14px;">My Favourite:</h4>
+    <select multiple class="myselect">
+     <option>Donald</option>
+     <option selected>Mickey</option>
+     <option>Goofy</option>  
+    </select>
+   </div>
+   <div style="width:250px;float:left;">
+    <h4 style="font-size:14px;margin-top:0px;">Upload image:</h4>
+    <input type="file" />
+   </div>
+   <input type="image" src="arrow-r.jpg" style="float:right;border:3px solid transparent" />
+   <div style="clear:both"></div>  
+  </div> 
+ -->
+                </form>
+              </div>
+
+              <br>
+
+            </div>
+            </div>
+
+        </section>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+  <script>
+    let seletores = [{
+        id: 0,
+        titulo: "*",
+        legenda: "Seletor *",
+        texto: "Seleciona todos os elementos da página",
+        exemplo: `* {<br />
+                       <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "*"
+      },
+      {
+        id: 1,
+        titulo: "Tag - (h1)",
+        legenda: "Seletor de Tag",
+        texto: "Seleciona todas as tags especificada, no exemplo a tag h1",
+        exemplo: `h1 {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "h1"
+      },
+      {
+        id: 2,
+        titulo: "Classe - (.intro)",
+        legenda: "Seletor de Classe",
+        texto: 'Seleciona todas as tags com a classe definida, no exemplo class="intro"',
+        exemplo: `.intro {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: ".intro"
+      },
+      {
+        id: 3,
+        titulo: "id - (#sobreNome)",
+        legenda: "Seletor de Classe",
+        texto: 'Seleciona a tag com id especificado, no exemplo id="sobreNome"',
+        exemplo: `#sobreNome {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "#sobreNome"
+      },
+      {
+        id: 4,
+        titulo: "Multiplo ',' - (.intro, #sobreNome)",
+        legenda: "Seletor Multiplo ','",
+        texto: 'Seleciona todas tags com classe .intro e a tag #sobreNome',
+        exemplo: `.intro, #sobreNome {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: ".intro, #sobreNome"
+      },
+      {
+        id: 5,
+        titulo: "Multiplo ',' - (div, p)",
+        legenda: "Seletor Multiplo ','",
+        texto: 'Seleciona todas as tags div e p',
+        exemplo: `div, p {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "div, p"
+      },
+      {
+        id: 6,
+        titulo: "Multiplo ',' - (div, p)",
+        legenda: "Seletor Multiplo ','",
+        texto: 'Seleciona todas as tags div e p',
+        exemplo: `div, p {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "div, p"
+      },
+      {
+        id: 7,
+        titulo: "Dentro - (div p)",
+        legenda: "Seletor Dentro",
+        texto: 'Seleciona todos elementos p dentro de elementos div',
+        exemplo: `div p {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "div p"
+      },
+      {
+        id: 8,
+        titulo: "Dentro - (.intro span)",
+        legenda: "Seletor Dentro",
+        texto: 'Seleciona todos elementos span dentro de elementos da classe intro, não precisa ser filha direta',
+        exemplo: `.intro span {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: ".intro span"
+      },
+      {
+        id: 9,
+        titulo: "Dentro - (.intro > span)",
+        legenda: "Seletor Dentro",
+        texto: 'Seleciona todos elementos span dentro de elementos da classe intro, filhas direta',
+        exemplo: `.intro > span {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: ".intro > span"
+      },
+    ]
+
+    let lista = document.querySelector(".list ul")
+    seletores.forEach( (s) =>{
+      //<li data-id="0" class="ativo"> * </li>
+      let li = document.createElement('li')
+      li.dataset.id = s.id
+      li.innerHTML = s.titulo
+
+      lista.appendChild(li)
+
+    })
+
+    let itens = document.querySelectorAll('.list ul li')
+
+    itens.forEach(i => {
+      i.onclick = ({
+        target
+      }) => {
+        itens.forEach((li) => li.classList.remove("ativo"));
+        target.classList.add("ativo")
+
+        let leg = document.querySelector("#main-texto legend")
+        leg.innerHTML = ' '+seletores[target.dataset.id].legenda+' '
+
+        let dv = document.querySelectorAll("#main-texto div")
+        dv[0].innerHTML = seletores[target.dataset.id].texto        
+        dv[1].innerHTML = seletores[target.dataset.id].exemplo
+
+        //fs.innerHTML = seletores[target.dataset.id].texto
+        //let leg = document.createElement("legend");
+        //fs.appendChild(leg)
+
+        let comp = document.querySelectorAll('#iframeResult *')
+        comp.forEach((c)=>{
+          c.classList.remove('select')
+        })
+
+        comp = document.querySelectorAll(`#iframeResult  ${seletores[target.dataset.id].seletor}`)
+        comp.forEach((c)=>{
+          c.classList.add('select')
+        })
+
+      }
+    })
+
+    let primeiro = document.querySelector('.list ul li:nth-child(1)')
+    primeiro.click();
+  </script>
+</body>
+
+</html>
