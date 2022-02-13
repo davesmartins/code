@@ -102,6 +102,10 @@ body{
     border: 2px solid rgb(255, 102, 102);
     background-color: rgb(255, 255, 153);
 }
+.noSel, .markup{
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+}
 
 
 

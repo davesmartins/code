@@ -49,7 +49,7 @@
               </h1>              
               <span class="markup">&lt;/h1&gt;</span>
 
-              <div id="helpIntro" style="">
+              <div id="helpIntro" class="noSel" style="">
                 <span class="markup">&lt;div class="intro"&gt;</span>
                 <div class="intro">
                     <span class="markup">&lt;p&gt;</span>
@@ -65,14 +65,20 @@
                   <span class="markup">&lt;p id="ender"&gt;</span><p id="ender" style="">vivo aqui em jf </p><span class="markup">&lt;/p&gt;</span>
 
                   <br />
+
+                  <span class="markup">&lt;a href="https://teste.com.br"&gt;</span>
+                  <a href="https://teste.com.br" >Teste.com </a>
+                  <span class="markup">&lt;/a&gt;</span>
+
+                  <br />
                  
 
                   <span class="markup">&lt;span &gt;</span>
-                  <span id="sobreNome" style="">Profissão: Não tenho.</span>
+                  <span style="">Profissão: Não tenho.</span>
                   <span class="markup">&lt;/span&gt;</span>
 
                   <br />
-                 <span class="markup">&lt;p&gt;</span> <p style="margin-bottom: 4px;">linguagens de interesse:</p><span
+                 <span class="markup">&lt;p&gt;</span> <p style="margin-bottom: 4px;">Diversão: dormir</p><span
                       class="markup">&lt;/p&gt;</span>
                     
 
@@ -81,22 +87,27 @@
               </div>
 
               <br>
+              <span class="markup">&lt;p&gt;</span> <p style="margin-bottom: 4px;">linguagens de interesse:</p><span
+              class="markup">&lt;/p&gt;</span>
+              <br />
               <div class="helpUl" style="">
-                <span class="markup">&lt;ul id="Listfriends&gt;</span>
-                <ul id="Listfriends" style="margin-top:0px;margin-bottom:0px;">
+                <span class="markup">&lt;ul id="listaLinguagens&gt;</span>
+                <p style="display:none;"></p>
+                <ul id="listaLinguagens" style="margin-top:0px;margin-bottom:0px;">
 
                   <li ><span
-                      class="markup">&lt;li&gt;</span>Goofy<span class="markup">&lt;/li&gt;</span></li>
-                  <li style=""><span class="markup">&lt;li&gt;</span>Mickey<span class="markup">&lt;/li&gt;</span></li>
-                  <li style=""><span class="markup">&lt;li&gt;</span>Daisy<span class="markup">&lt;/li&gt;</span></li>
-                  <li style=""><span class="markup">&lt;li&gt;</span>Pluto<span class="markup">&lt;/li&gt;</span></li>
+                      class="markup">&lt;li&gt;</span>ReactJS<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>Java<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>NodeJs<span class="markup">&lt;/li&gt;</span></li>
+                  <li style=""><span class="markup">&lt;li&gt;</span>JavaScript<span class="markup">&lt;/li&gt;</span></li>
                 </ul>
                 <span class="markup">&lt;/ul&gt;</span>
               </div>
 
               <ul style="display:none;"></ul>
-              <p class="myquote" style=""><span class="markup">&lt;p class="myquote"&gt;</span>All my friends are
-                great!<span class="markup">&lt;br&gt;</span><br>But I really like Daisy!!<span
+              <p class="best" style=""><span class="markup">&lt;p class="best"&gt;</span>Todas 
+                linguagens são boas
+                <span class="markup">&lt;br&gt;</span><br>Mas foque em uma que mais lhe atrai.<span
                   class="markup">&lt;/p&gt;</span></p>
 
               <p lang="it" title="Hello beautiful" style=""><span class="markup">&lt;p lang="it" title="Hello
@@ -278,26 +289,16 @@
       },
       {
         id: 5,
-        titulo: "Multiplo ',' - (div, p)",
+        titulo: "Multiplo ',' - (h1, p)",
         legenda: "Seletor Multiplo ','",
-        texto: 'Seleciona todas as tags div e p',
-        exemplo: `div, p {<br />
+        texto: 'Seleciona todas as tags h1 e p',
+        exemplo: `h1, p {<br />
                         <span style="padding-left:1.2rem">background-color: #000; </span><br />
                     }`,
-        seletor: "div, p"
+        seletor: "h1, p"
       },
       {
         id: 6,
-        titulo: "Multiplo ',' - (div, p)",
-        legenda: "Seletor Multiplo ','",
-        texto: 'Seleciona todas as tags div e p',
-        exemplo: `div, p {<br />
-                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
-                    }`,
-        seletor: "div, p"
-      },
-      {
-        id: 7,
         titulo: "Dentro - (div p)",
         legenda: "Seletor Dentro",
         texto: 'Seleciona todos elementos p dentro de elementos div',
@@ -307,7 +308,7 @@
         seletor: "div p"
       },
       {
-        id: 8,
+        id: 7,
         titulo: "Dentro - (.intro span)",
         legenda: "Seletor Dentro",
         texto: 'Seleciona todos elementos span dentro de elementos da classe intro, não precisa ser filha direta',
@@ -317,7 +318,7 @@
         seletor: ".intro span"
       },
       {
-        id: 9,
+        id: 8,
         titulo: "Dentro - (.intro > span)",
         legenda: "Seletor Dentro",
         texto: 'Seleciona todos elementos span dentro de elementos da classe intro, filhas direta',
@@ -326,7 +327,121 @@
                     }`,
         seletor: ".intro > span"
       },
+      {
+        id: 9,
+        titulo: "+ - (ul + p)",
+        legenda: "Seletor + - próximo",
+        texto: 'Seleciona todos p que estão imediatamente depois de um elemento ul',
+        exemplo: `ul + p {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "ul + p"
+      },
+      {
+        id: 10,
+        titulo: "+ - (p ~ ul)",
+        legenda: "Seletor ~ - próximo",
+        texto: 'Seleciona todo elemento ul que precede um elemento p',
+        exemplo: `p ~ ul {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "p ~ ul"
+      },
+      {
+        id: 11,
+        titulo: "+ - (p.best)",
+        legenda: "Seletor tag com classe",
+        texto: 'Seleciona todo elemento p que tenha a classe best',
+        exemplo: `p.best {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "p.best"
+      },
+      {
+        id: 12,
+        titulo: "Atributo - [id]",
+        legenda: "Seletor de Atributo",
+        texto: 'Seleciona todos os elementos com o atributo id, poderiamos usar outros atributos, ex [target], [href] etc',
+        exemplo: `[id] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "[id]"
+      },
+      {
+        id: 13,
+        titulo: "Atributo - [id=sobreNome]",
+        legenda: "Seletor de Atributo",
+        texto: 'Seleciona todos os elementos com o atributo id como nome sobreNome',
+        exemplo: `[id=sobreNome] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "[id=sobreNome]"
+      },
+      {
+        id: 14,
+        titulo: "Atributo - [id^=so]",
+        legenda: "Seletor de Atributo",
+        texto: 'Seleciona todos os elementos com o atributo id iniciando com so',
+        exemplo: `[id^=so] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "[id^=so]"
+      },
+      {
+        id: 15,
+        titulo: "Atributo - [id$=me]",
+        legenda: "Seletor de Atributo",
+        texto: 'Seleciona todos os elementos com o atributo id terminando com me',
+        exemplo: `[id$=me] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "[id$=me]"
+      },
+      {
+        id: 16,
+        titulo: "Atributo - [id*=en]",
+        legenda: "Seletor de Atributo",
+        texto: 'Seleciona todos os elementos com o atributo id que contenha en',
+        exemplo: `[id*=en] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: "[id*=en]"
+      },
+      {
+        id: 17,
+        titulo: 'Atributo - a[href^="https"]',
+        legenda: "Seletor de Tag mais Atributo",
+        texto: 'Seleciona todas as tags a com atributo href iniciando com https',
+        exemplo: `a[href^="https"] {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'a[href^="https"]'
+      },
+      {
+        id: 18,
+        titulo: 'pseudo classe - li:first-child',
+        legenda: "Seletor de Pseudo Classe :first-child",
+        texto: 'Seleciona todo elemento p que é o primeiro filho do seu pai',
+        exemplo: `li:first-child {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:first-child'
+      },
+      {
+        id: 19,
+        titulo: 'pseudo classe - p::first-letter',
+        legenda: "Seletor de Pseudo Classe ::first-letter",
+        texto: 'Seleciona a primeira letra de todo elemento p',
+        exemplo: `p::first-letter {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'p::first-letter'
+      },
     ]
+
+    var sheet19 = document.createElement('style')
+    sheet19.id = "tag19"
+    sheet19.innerHTML = `p::first-letter { border: 2px solid rgb(255, 102, 102); background-color: rgb(255, 255, 153);  }`
 
     let lista = document.querySelector(".list ul")
     seletores.forEach( (s) =>{
@@ -364,10 +479,20 @@
           c.classList.remove('select')
         })
 
-        comp = document.querySelectorAll(`#iframeResult  ${seletores[target.dataset.id].seletor}`)
-        comp.forEach((c)=>{
-          c.classList.add('select')
-        })
+        if (seletores[target.dataset.id].id === 19){
+
+          document.body.appendChild(sheet19);
+
+        }else{
+          let s = document.querySelector('#tag19')
+          s && s.remove()
+          //document.body.style.removeProperty('p::first-letter');
+          comp = document.querySelectorAll(`#iframeResult  ${seletores[target.dataset.id].seletor}`)
+          //console.log(comp)
+          comp.forEach((c)=>{
+            c.classList.add('select')
+          })
+      }
 
       }
     })
