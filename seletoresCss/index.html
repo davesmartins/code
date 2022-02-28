@@ -8,6 +8,7 @@
   <title>Seletores CSS</title>
 
   <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -18,10 +19,6 @@
 
       <div class="list">
         <ul>
-          <!-- <li data-id="0" class="ativo"> * </li>
-          <li data-id="1"> Tag, h1</li>
-          <li>3</li>
- -->
         </ul>
       </div>
 
@@ -435,13 +432,71 @@
         exemplo: `p::first-letter {<br />
                         <span style="padding-left:1.2rem">background-color: #000; </span><br />
                     }`,
-        seletor: 'p::first-letter'
+        seletor: 'p::first-letter',
+        sheet: `p::first-letter { border: 2px solid rgb(255, 102, 102); background-color: rgb(255, 255, 153);  }`
+      },
+      {
+        id: 20,
+        titulo: 'pseudo classe - h1:hover',
+        legenda: "Seletor de Pseudo Classe :focus",
+        texto: 'todo elemento h1 terá o efeito aplicado quando o mouse passar por cima.',
+        exemplo: `h1:hover {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'h1:hover',
+        sheet: `h1:hover { border: 2px solid rgb(255, 102, 102); background-color: rgb(255, 255, 153);  }`
+      },
+      {
+        id: 21,
+        titulo: 'pseudo classe - li:last-child',
+        legenda: "Seletor de último elemento",
+        texto: 'seleciona o último li, poderia ser combinado, ex: .lista li:last-child',
+        exemplo: `li:last-child {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:last-child',
+      },
+      {
+        id: 22,
+        titulo: 'pseudo classe - li:nth-child(even)',
+        legenda: "Seletor de elementos pares",
+        texto: 'seleciona os li pares, poderia ser combinado, ex: .lista li:nth-child(even)',
+        exemplo: `li:nth-child(even) {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:nth-child(even)',
+      },
+      {
+        id: 23,
+        titulo: 'pseudo classe - li:nth-child(odd)',
+        legenda: "Seletor de elementos impares",
+        texto: 'seleciona os li impares, poderia ser combinado, ex: .lista li:nth-child(odd)',
+        exemplo: `li:nth-child(odd) {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:nth-child(odd)',
+      },
+      {
+        id: 24,
+        titulo: 'pseudo classe - li:nth-child(1)',
+        legenda: "Seletor de elementos pelo indice",
+        texto: 'seleciona os li na posição, poderia ser combinado, ex: .lista li:nth-child(1)',
+        exemplo: `li:nth-child(1) {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:nth-child(1)',
+      },
+      {
+        id: 25,
+        titulo: 'pseudo classe - li:nth-last-child(1)',
+        legenda: "Seletor de elementos pelo indice a partir do final",
+        texto: 'seleciona os li na posição contando pelo final, poderia ser combinado, ex: .lista li:nth-last-child(1)',
+        exemplo: `li:nth-last-child(1) {<br />
+                        <span style="padding-left:1.2rem">background-color: #000; </span><br />
+                    }`,
+        seletor: 'li:nth-last-child(1)',
       },
     ]
-
-    var sheet19 = document.createElement('style')
-    sheet19.id = "tag19"
-    sheet19.innerHTML = `p::first-letter { border: 2px solid rgb(255, 102, 102); background-color: rgb(255, 255, 153);  }`
 
     let lista = document.querySelector(".list ul")
     seletores.forEach( (s) =>{
@@ -479,13 +534,18 @@
           c.classList.remove('select')
         })
 
-        if (seletores[target.dataset.id].id === 19){
+          let s = document.querySelector('#tag')
+          s && s.remove()
 
-          document.body.appendChild(sheet19);
+        if (seletores[target.dataset.id].sheet ){
+          console.log(seletores[target.dataset.id].sheet)
+          let sheet = document.createElement('style')
+          sheet.id = "tag"
+          sheet.innerHTML = seletores[target.dataset.id].sheet
+
+          document.body.appendChild(sheet);
 
         }else{
-          let s = document.querySelector('#tag19')
-          s && s.remove()
           //document.body.style.removeProperty('p::first-letter');
           comp = document.querySelectorAll(`#iframeResult  ${seletores[target.dataset.id].seletor}`)
           //console.log(comp)
